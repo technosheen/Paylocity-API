@@ -15,7 +15,7 @@ $("#get-data").on("click", (e) => {
       const markup = data.jobs
         .map(
           (job) =>
-            `<li>${job.title}: ${job.jobLocation.locationDisplayName}</li>`
+            `<li>${job.title} | ${job.hiringDepartment} | ${job.jobLocation.locationDisplayName}</li>`
         )
         .join("");
 
