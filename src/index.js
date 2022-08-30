@@ -13,7 +13,10 @@ $("#get-data").on("click", (e) => {
     (data) => {
       console.log(data);
       const markup = data.jobs
-        .map((job) => `<li>${job.title}: ${job.jobLocation.name}</li>`)
+        .map(
+          (job) =>
+            `<li>${job.title}: ${job.jobLocation.locationDisplayName}</li>`
+        )
         .join("");
 
       const list = $("<ul />").html(markup);
